@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get your loan!</title>
+</head>
+
+<body>
+
+    <h1>Apply to get a loan!</h1>
+
+    <select id="loanApplications" onchange="loadApplication();">
+    </select>
+
+    <hr />
+
+
+    <table>
+        <tr>
+            <td>Full name and title</td>
+            <td colspan="3"><input type="text" name="inputName" id="inputName" size="25">
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="text" name="inputDoBMonth" id="inputDoBMonth" size="4" maxlength="2" placeholder="MM">
+            <td><input type="text" name="inputDoBDay" id="inputDoBDay" size="3" maxlength="2" placeholder="DD">
+            <td><input type="text" name="inputDoBYear" id="inputDoBYear" size="3" maxlength="4" placeholder="YYYY">
+          
+        <tr>
+            <td>Annual income</td>
+            <td colspan="3"><input type="text" name="inputAnnualIncome" id="inputAnnualIncome" size="25">
+        </tr>
+        <tr>
+            <td>Check all that applies</td>
+            <td colspan="3">
+                    <input type="checkbox" id="IsEmployed" >I'm employed<br>  
+                    <input type="checkbox" id="HasKids" >I have kids<br>
+                    <input type="checkbox" id="HasLoans" >I have other loans<br>
+                    <input type="checkbox" id="HasCreditCards" >I have multiple credit cards
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="4">
+                <hr />
+            </td>
+        </tr>
+        <tr>
+          <td>What will you use this loan for?</td>
+          <td colspan="3">
+            <textarea name="inputLoanPurpose" id="inputLoanPurpose" rows="3"
+                      cols="27"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>How much do you want to borrow?</td>
+          <td colspan="3">
+            <input type="number" name="inputLoanAmount" id="inputLoanAmount" size="25" min="0" step="1" >
+          </td>
+        </tr>
+
+    <tr>
+  <td colspan="4">
+    <hr />
+  </td>
+</tr>
+
+<td>Review Text</td>
+<td colspan="3">
+  <textarea name="reviewText" id="reviewText" rows="3" cols="27" readonly></textarea>
+</td>
+
+<tr>
+  <td><button onclick="saveApplication();" id="submitButton">Submit</button></td>
+</tr>
+</table>
+
+<br>
+<div id="riskSummary" name="riskSummary" class="border" style="display:none;"></div>
+
+<script src="Main.js"></script>
+</body>
+</html>
